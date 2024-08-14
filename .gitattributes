@@ -1,0 +1,22 @@
+# Normalize all text files to LF endings
+* text=auto
+
+# Binary files
+*.png binary
+*.jpg binary
+*.pdf binary
+
+# Merge strategy for lock files
+*.lock merge=ours
+
+# Custom diff driver for Markdown files
+*.md diff=markdown
+
+# Large files tracked by Git LFS
+*.psd filter=lfs diff=lfs merge=lfs -text
+
+# Ignore drafts in the docs folder during export
+/docs/drafts/* export-ignore
+
+# Exclude minified JavaScript files from language stats
+*.min.js linguist-vendored
